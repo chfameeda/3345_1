@@ -22,7 +22,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: ECS Automation
+      - name: Automation
   uses: leelaprakash/gh-actions-automation-ecs-central@vk
         
 
