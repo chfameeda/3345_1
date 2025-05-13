@@ -22,10 +22,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Build Docker image (no push)
-        uses: docker/build-push-action@v6.16.0
-        with:
-          context: .
-          push: false
-          tags: yourdockerhubusername/yourimage:latest
+      - name: ECS Automation
+  uses: leelaprakash/gh-actions-automation-ecs-central@vk
+        
 
