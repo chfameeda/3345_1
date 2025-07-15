@@ -1,0 +1,21 @@
+name: Run Tests and Save Artifact
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Tests
+        run: |
+          mkdir -p test-results
+          echo "This is a test report" > test-results/report.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: test-results/
