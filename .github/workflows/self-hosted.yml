@@ -7,6 +7,8 @@ jobs:
     runs-on: [self-hosted, windows]
     steps:
       - run: echo "Running on Windows Self-Hosted Runner"
+        shell: cmd
+
 
   linux-job:
     runs-on: [self-hosted, linux]
