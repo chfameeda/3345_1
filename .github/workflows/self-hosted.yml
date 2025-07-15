@@ -1,0 +1,14 @@
+name: Run on Self-Hosted
+
+on: [push]
+
+jobs:
+  windows-job:
+    runs-on: [self-hosted, windows]
+    steps:
+      - run: echo "Running on Windows Self-Hosted Runner"
+
+  linux-job:
+    runs-on: [self-hosted, linux]
+    steps:
+      - run: echo "Running on Linux Self-Hosted Runner"
