@@ -1,0 +1,5 @@
+name: Hello Docker Action
+description: A simple Docker-based action that prints "Hello, World!"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
