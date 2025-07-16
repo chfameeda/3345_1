@@ -1,0 +1,18 @@
+name: Custom Action Workflow
+
+on: [push]
+
+jobs:
+  hello-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Hello JS Action
+        uses: ./.github/actions/hello-js
+
+  hello-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Hello Docker Action
+        uses: ./.github/actions/hello-docker
