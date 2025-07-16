@@ -1,0 +1,32 @@
+name: Integration Test with Service Container
+
+on:
+  push:
+    branches:
+      - main  # or your main branch name
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-latest
+
+    services:
+      todo-service:
+        image: ghcr.io/chfameeda/3345_1:latest
+        ports:
+          - 3000:3000  # match your app’s port
+        options: >-
+          --health-cmd="curl http://localhost:3000 || exit 1"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Wait for service to be healthy
+        run: sleep 30
+
+      - name: Run integration tests
+        run: |
+          curl http://localhost:3000  # or your test script
