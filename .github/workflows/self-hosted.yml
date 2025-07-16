@@ -9,5 +9,9 @@ jobs:
       - run: echo "Running on Windows Self-Hosted Runner"
         shell: cmd
 
-
+linux-job:
+    runs-on: [self-hosted, linux]
+    steps:
+      - run: echo "Running on Linux Self-Hosted Runner"
+        shell: bash
  
