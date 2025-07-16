@@ -1,5 +1,0 @@
-name: 'Hello Docker Action'
-description: 'Prints Hello, World! using Docker'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'

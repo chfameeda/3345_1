@@ -1,5 +1,0 @@
-name: Hello JS Action
-description: Prints Hello, World!
-runs:
-  using: 'node16'
-  main: 'index.js'
