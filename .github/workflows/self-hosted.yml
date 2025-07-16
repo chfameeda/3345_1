@@ -10,7 +10,4 @@ jobs:
         shell: cmd
 
 
-  linux-job:
-    runs-on: [self-hosted, linux]
-    steps:
-      - run: echo "Running on Linux Self-Hosted Runner"
+ 
